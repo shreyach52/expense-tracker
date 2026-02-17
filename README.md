@@ -6,8 +6,8 @@ A simple expense tracker application that started as a Python-based CLI program 
  https://spend-save-system.lovable.app
 
 ##  Preview
-![Expense Tracker Preview](screenshots/app-preview-1.png)
-![Expense Tracker Preview](screenshots/app-preview-2.png)
+![Expense Tracker Preview](screenshots/preview-1.png)
+![Expense Tracker Preview](screenshots/preview-2.png)
 
 ##  Features
 - Add expenses with category and amount
@@ -39,4 +39,5 @@ A simple expense tracker application that started as a Python-based CLI program 
 ##  About Me
 I’m a first-year CSE student comfortable with Python, currently working on DSA in Java.  
 I’m passionate about Machine Learning and Cyber Security, and I enjoy building practical projects that solve real problems.
+
 
