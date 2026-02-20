@@ -76,12 +76,62 @@ def view_expenses():
 
         print("------------------------------")
 
+def monthly_summary():
+    
+    
+    while True:
+        try:
+            month = int(input("Enter month (1-12): "))
+            year = int(input("Enter year (e.g. 2026): "))
+            if 1 <= month <= 12:
+                break
+            else:
+                print("Please enter a valid month between 1 and 12")
+        except ValueError:
+            print("Please enter a valid number")
+
+    
+    data = load_data()
+
+    
+    filtered = []
+    for record in data:
+        parts = record["date"].split("-")
+        record_year = int(parts[0])
+        record_month = int(parts[1])
+        if record_month == month and record_year == year:
+            filtered.append(record)
+
+    # Check if any records found
+    if not filtered:
+        print(f"\n No expenses found for {month}/{year}\n")
+        return
+
+    # Calculate total and count
+    grand_total = 0
+    item_count = 0
+    for record in filtered:
+        grand_total += sum(record["expenses"].values())
+        item_count += len(record["expenses"])
+
+    # Display the summary
+    print("\n==============================")
+    print(f"  MONTHLY SUMMARY - {month}/{year}")
+    print("==============================")
+    print(f"Number of expense items : {item_count}")
+    print(f"Number of entries       : {len(filtered)}")
+    print(f"Total spent             : {grand_total} rs")
+    print("==============================\n")
+
+
+
 
 def menu():
     while True:
         print("\n1. Add Expense")
         print("2. View Expenses")
-        print("3. Exit")
+        print("3. View Monthly Summary")
+        print("4. Exit")
 
         choice = input("Choose an option: ")
 
@@ -90,6 +140,8 @@ def menu():
         elif choice == "2":
             view_expenses()
         elif choice == "3":
+            monthly_summary()
+        elif choice == "4":
             print(" Goodbye!")
             break
         else:
