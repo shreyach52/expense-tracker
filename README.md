@@ -9,6 +9,9 @@ A simple expense tracker application that started as a Python-based CLI program 
 ![Expense Tracker Preview](screenshots/preview-1.png)
 ![Expense Tracker Preview](screenshots/preview-2.png)
 
+Note: The Lovable-built UI is a prototype. 
+Current backend features (like monthly summary) are demonstrated via CLI.
+
 ##  Features
 - Add expenses with category and amount
 - Optional notes for each entry
@@ -39,5 +42,6 @@ A simple expense tracker application that started as a Python-based CLI program 
 ##  About Me
 I’m a first-year CSE student comfortable with Python, currently working on DSA in Java.  
 I’m passionate about Machine Learning and Cyber Security, and I enjoy building practical projects that solve real problems.
+
 
 
